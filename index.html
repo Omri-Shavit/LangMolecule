@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lang Polygons</title>
+    <link rel="stylesheet" href="bootstrap.min.css" data-noprefix>
+</head>
+<body>
+    <div class="row" style="width:100vw">
+        <div class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a href="../" class="navbar-brand">Lang Polygon Playground</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-5 mt-5">
+        <div class="col-4">
+            <input type="radio" class="btn-check" id="nodes" name="inputSetting" value="nodes" checked>
+            <label class="btn btn-outline-primary" for="nodes">Create Nodes</label>
+            <input type="radio" class="btn-check" id="drag" name="inputSetting" value="drag">
+            <label class="btn btn-outline-primary" for="drag">Drag Nodes</label>
+            <input type="radio" class="btn-check" id="edges" name="inputSetting" value="edges">
+            <label class="btn btn-outline-primary" for="edges">Create Edges</label>
+            <input type="radio" class="btn-check" id="delete" name="inputSetting" value="delete">
+            <label class="btn btn-outline-primary" for="delete">Delete Components</label>
+            <input type="button" class="btn btn-danger" id="clear" name="clear" value="Clear All">
+            <input type="checkbox" class="btn-check" id="toggleLabels" autocomplete="off">
+            <label class="btn btn-info" for="toggleLabels">Toggle Labels</label>
+        </div>
+        <div class="col-8">
+        </div>
+    </div>
+    <div class="row mx-5">
+        <!-- Input Graph -->
+        <div class="col-4">
+            <canvas id="graphInput"></canvas><br>
+            <input type="button" class="btn btn-lg btn-success" id="createPoly" name="createPoly" value="Create Polygon">
+        </div>
+        <div class="col-4">
+            <canvas id="polygonDisplay" style="display: none"></canvas><br>
+            <input type="button" class="btn btn-lg btn-success" id="runLang" name="runLang" value="Run Lang's Universal Molecule Algorithm" style="display: none">
+        </div>
+        <div class="col-4">
+            <p>3D rendering (To Be Implemented)</p>
+        </div>
+    </div>
+    <div class="row m-5">
+        <p id="message" style="color:red;font-size:3vh;font-weight:bold;opacity:0"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
